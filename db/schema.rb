@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_07_203305) do
+ActiveRecord::Schema.define(version: 2019_09_07_204732) do
+
+  create_table "devices", force: :cascade do |t|
+    t.integer "location_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_devices_on_location_id"
+  end
 
   create_table "locations", force: :cascade do |t|
     t.text "name"
