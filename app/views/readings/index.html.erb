@@ -1,0 +1,24 @@
+<h1>Temperature Readings</h1>
+
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Location ID</th>
+<th>Device ID</th>
+<th>Reading</th>
+</tr>
+</thead>
+
+<tbody>
+<% @readings.each do |reading| %>
+<tr>
+<td><%= reading.created_at %></td>
+<td><%= reading.location_id %></td>
+<td><%= reading.device_id %></td>
+<td><%= reading.temperature %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
