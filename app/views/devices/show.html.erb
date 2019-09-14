@@ -1,0 +1,21 @@
+<h1>Devices</h1>
+
+<table>
+<thead>
+<tr>
+<th>Device ID</th>
+<th>Current Location ID</th>
+<th>Created Date</th>
+</tr>
+</thead>
+
+<tbody>
+<% @devices.each do |device| %>
+<tr>
+<td><%= device.id %></td>
+<td><%= device.location_id %></td>
+<td><%= device.created_at %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
