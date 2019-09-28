@@ -5,6 +5,7 @@
 <tr>
 <th>Device ID</th>
 <th>Current Location ID</th>
+<th>Current Location Name</th>
 <th>Created Date</th>
 </tr>
 </thead>
@@ -14,6 +15,7 @@
 <tr>
 <td><%= device.id %></td>
 <td><%= device.location_id %></td>
+<td><%= device.location.name %></td>
 <td><%= device.created_at %></td>
 </tr>
 <% end %>
