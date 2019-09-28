@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_07_205502) do
+ActiveRecord::Schema.define(version: 2019_09_28_212329) do
 
   create_table "devices", force: :cascade do |t|
     t.integer "location_id"
@@ -26,13 +26,11 @@ ActiveRecord::Schema.define(version: 2019_09_07_205502) do
   end
 
   create_table "readings", force: :cascade do |t|
-    t.integer "location_id"
     t.float "temperature"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "device_id"
     t.index ["device_id"], name: "index_readings_on_device_id"
-    t.index ["location_id"], name: "index_readings_on_location_id"
   end
 
 end

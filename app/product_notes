@@ -23,7 +23,7 @@ Reading
 id | location_id | device_id | temperature | date created | date modiifed
 
 A reading is a temperature read from/sent by a device.
-Because a device can be moved, also store the location of the device at the time of the reading.
+Because a device can be moved, future dev should also store the location of the device at the time of the reading.
 
 Routes
 
