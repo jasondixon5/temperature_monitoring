@@ -5,6 +5,7 @@
 <tr>
 <th>Date</th>
 <th>Device ID</th>
+<th>Device Location</th>
 <th>Reading</th>
 </tr>
 </thead>
@@ -14,6 +15,7 @@
 <tr>
 <td><%= reading.created_at %></td>
 <td><%= reading.device_id %></td>
+<td><%= reading.device.location.name %></td>
 <td><%= reading.temperature %></td>
 </tr>
 <% end %>
