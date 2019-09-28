@@ -22,3 +22,12 @@
 </tbody>
 </table>
 
+<tbody>
+<% @locations.each do |reading| %>
+<tr>
+<td><%= location.created_at %></td>
+<td><%= location.name %></td>
+</tr>
+<% end %>
+</tbody>
+</table>

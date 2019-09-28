@@ -1,0 +1,59 @@
+Models
+
+Location
+id | name | date created | date modiifed
+
+Device
+id | location_id | date created | date modified
+
+Reading
+id | location_id | device_id | temperature | date created | date modiifed
+
+
+Routes
+
+index : Show a list of all readings
+
+/new : Display form to store a new reading in the readings table 
+    
+    "device_id" : integer
+        Provided in post request
+    "temperature" : float
+        Provided in post request
+    "location_id" : integer
+        Derived from current location id of device
+        Query db to get this id and include it
+
+/api/new : Store a new reading in the readings table
+    
+    "device_id" : integer
+        Provided in post request
+    "temperature" : float
+        Provided in post request
+    "location_id" : integer
+        Derived from current location id of device
+        Query db to get this id and include it
+
+/api/show : Show readings
+
+    "date"
+        Date of reading
+    "location" : text
+        Name of location
+    "temperature" : float
+        Temperature for that reading
+
+/api/devices : Alias for /api/devices/show. List devices.
+
+/api/devices/show : List devices
+
+/api/devices/new : Add a new device
+
+/api/locations : Alias for /api/locations/show. List locations.
+
+/api/locations/show : List locations 
+
+/api/locations/new : Add a new location 
+
+
+
