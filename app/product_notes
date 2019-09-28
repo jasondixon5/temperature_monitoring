@@ -3,12 +3,27 @@ Models
 Location
 id | name | date created | date modiifed
 
+There can be many locations.
+
+Associatons:
+has_many :devices
+
 Device
 id | location_id | date created | date modified
+
+Associations:
+belongs_to :location
+has_many :reading
+
+There can many devices. 
+Each device can only be in one location at a time.
+A device can have many readings.
 
 Reading
 id | location_id | device_id | temperature | date created | date modiifed
 
+A reading is a temperature read from/sent by a device.
+Because a device can be moved, also store the location of the device at the time of the reading.
 
 Routes
 
