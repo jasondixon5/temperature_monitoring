@@ -1,3 +1,11 @@
+TODO
+
+* Create forms, etc for editing resources (readings, devices, and locations)
+* Create api to store, read, and edit resources
+
+History
+* 2020-01-03 JD: fixed bug with storing new and showing readings
+
 Models
 
 Location
