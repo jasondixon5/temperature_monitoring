@@ -1,5 +1,6 @@
 TODO
 
+* Write tests
 * Create forms, etc for editing resources (readings, devices, and locations)
 * Create api to store, read, and edit resources
 
