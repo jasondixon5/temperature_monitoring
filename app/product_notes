@@ -1,7 +1,6 @@
 TODO
 
 * Write tests
-  - Model
   - Controller
   - Integration
 * Create forms, etc for editing resources (readings, devices, and locations)
@@ -9,6 +8,7 @@ TODO
 
 History
 * 2020-01-03 JD: fixed bug with storing new and showing readings
+* 2020-01-04 JD: created model tests
 
 Models
 
