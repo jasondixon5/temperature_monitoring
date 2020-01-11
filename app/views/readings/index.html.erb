@@ -3,9 +3,10 @@
 <table>
 <thead>
 <tr>
+<th>Reading ID</th>
 <th>Device Location</th>
 <th>Reading</th>
-<th>Date</th>
+<th>Created Date</th>
 
 </tr>
 </thead>
@@ -13,6 +14,7 @@
 <tbody>
 <% @readings.each do |reading| %>
 <tr>
+<td><%= reading.id %></td>
 <td><%= reading.device.location.name %> (device id <%= reading.device.id %>)</td>
 <td><%= reading.temperature %></td>
 <td><%= reading.created_at %></td>
