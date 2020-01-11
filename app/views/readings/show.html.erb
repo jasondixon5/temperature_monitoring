@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Reading <%= @reading.id %></h2>
+<h2>Reading ID <%= @reading.id %></h2>
 
-<p>Reading ID: <%= @reading.id %></p>
 <p>Temperature: <%= @reading.temperature %></p>
-<p>Device ID: <%= @reading.device_id %></p>
+<p>Device Location: <%= @reading.device.location.name %> (Device ID <%= @reading.device_id %>)</p>
 <p>Reading Created: <%= @reading.created_at %></p>
 
-<%= link_to 'Edit', edit_reading_path(@reading) %> |
-<%= link_to 'Readings List', readings_path %>
+<!-- <%= link_to 'Edit', edit_reading_path(@reading) %> |-->
+<%= link_to 'List All Readings', readings_path %>

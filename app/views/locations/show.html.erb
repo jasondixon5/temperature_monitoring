@@ -2,9 +2,9 @@
 
 <h2><%= @location.name %></h2>
 
-<p><%= @location.name %></p>
-<p><%= @location.id %></p>
-<p><%= @location.created_at %></p>
+<p>Location Name: <%= @location.name %></p>
+<p>Location ID: <%= @location.id %></p>
+<p>Created: <%= @location.created_at %></p>
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Locations', locations_path %>

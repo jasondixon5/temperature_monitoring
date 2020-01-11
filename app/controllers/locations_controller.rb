@@ -12,6 +12,9 @@ class LocationsController < ApplicationController
         @location = Location.new
     end
 
+    def edit
+    end
+
     
     def create
         @location = Location.new(location_params)
@@ -26,7 +29,19 @@ class LocationsController < ApplicationController
           end
         end
       end
-    
+   
+    def update
+      respond_to do | format |
+        if @location.update(location_params)
+          format.html { redirect_to @location, notice: 'Device was successfully updated.' }
+          format.json { render action: 'show', status: ok, location: @location }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @location.errors, status: :unprocessable_entity }
+        end
+      end
+    end
+   
       private
       # Use callbacks to share common setup or constraints between actions.
       def set_location

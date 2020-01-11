@@ -8,6 +8,9 @@ class DevicesController < ApplicationController
     def show
     end
 
+    def edit
+    end
+    
     def new
         @device = Device.new
     end
@@ -26,7 +29,25 @@ class DevicesController < ApplicationController
         end
       end
     
+    def update
+      respond_to do | format |
+        if @device.update(device_params)
+          format.html { redirect_to @device, notice: 'Device was successfully updated.' }
+          format.json { render action: 'show', status: ok, location: @device }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @device.errors, status: :unprocessable_entity }
+        end
+      end
+    end
 
+    def destroy
+      @device.destroy
+      respond_to do | format |
+        format.html { redirect_to devices_url }
+        format.json { head :no_content }
+      end
+    end
     private
     # Use callbacks to share common setup or constraints between actions.
     def set_device
